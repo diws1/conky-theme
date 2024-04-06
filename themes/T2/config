@@ -1,0 +1,55 @@
+--# Conky Theme 2 (T2)#--
+
+conky.config = {
+    alignment = 'top_left',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = '#f9f9f9',
+	color1 = '#af87ff',
+	color2 = '#87dbff',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Terminus (TTF):size=30',
+	font1 = 'JetBrains Mono:size=10',
+	font2 = 'FontAwesome:size=11',
+    use_xft = true,
+    gap_x = 635,
+    gap_y = 350,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+	own_window_transparent = true,
+	own_window_argb_visual = true,
+	own_window_argb_value = 100,
+	own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+	short_units = true,
+}
+
+
+conky.text = [[
+${voffset 0}${offset 0}${color1}${time %H}${font}
+${voffset -41}${offset 50}${color2}${time %M}${font}
+${color grey}${font2}${font1}$color $uptime
+${color grey}${font2}${font1}$color $mem/$memmax - $memperc%
+]];
